@@ -27,7 +27,7 @@ SQL_INSERT_POST = "INSERT INTO test.parser_tbl(datetime, title, url) " \
 
 # select posts for last two days
 SQL_SELECT_POSTS = "select title from test.parser_tbl " \
-                   "where (datetime > current_date-2);"
+                   "where (datetime > current_date-1);"
 
 
 def save_to_postgresql(post_list):
