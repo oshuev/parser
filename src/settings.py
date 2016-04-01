@@ -6,9 +6,9 @@ request_headers = {'user-agent':
                    'Chrome/49.0.2623.108 Safari/537.36'}
 request_timeout = 10
 
-proxy = {'http': 'proxy.local.net:3128',
-         'https': 'proxy.local.net:3128'}
-use_proxy = True
+proxy = {'http': 'proxy:port',
+         'https': 'proxy:port'}
+use_proxy = False
 
 log_path = '../out'
 posts_num = 4

@@ -53,7 +53,7 @@ class BaseParser(object):
             ch.setFormatter(formatter)
             BaseParser.logger.addHandler(ch)
 
-            'logging.ERROR'
+            # only for logging.ERROR
             ch = logging.FileHandler(path.join(settings.log_path, 'parser_error.log'),
                                      encoding=file_encoding)
             ch.setLevel(logging.ERROR)
@@ -111,8 +111,8 @@ class BaseParser(object):
 
             if href and title and date:
                 post_data = {
-                    'href': self._get_href(post),
-                    'title': self._get_title(post),
+                    'href': unicode(self._get_href(post)),
+                    'title': unicode(self._get_title(post)),
                     'date': self._get_date(post),
                 }
             else:
